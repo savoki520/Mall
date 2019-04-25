@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>定制开发</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+<body>
+    <section class="custom">
+        <div class="custom_one">
+            <img src="image/Custom/custom_one.png">
+        </div>
+        <div class="custom_two">
+            <div class="custom_two_title">
+                <P>活动简介</P>
+            </div>
+            <div class="custom_two_intro">金秋十月，互联网设计行业顶级大咖评委已经集结完毕，等你来秀。本届沉淀两年的十佳设计师评选，谁会脱颖而出，谁会众望所归，让我们拭目以待！
+            </div>
+        </div>
+        <div class="custom_three">
+            <div class="custom_three_title">
+                <p>填写个人信息</p>
+            </div>
+            <div class="custom_three_content">
+                <div class="custom_three_item">
+                    <div class="custom_item_title">姓名</div>
+                    <input type="text" class="custom_item_text" id="name">
+                </div>
+                <div class="custom_three_item">
+                    <div class="custom_item_title">手机号</div>
+                    <input type="text" class="custom_item_text" id="phone">
+                </div>
+                <div class="custom_three_item">
+                    <div class="custom_item_title">商铺名</div>
+                    <input type="text" class="custom_item_text" id="shopname">
+                </div>
+                <div class="custom_three_item">
+                    <div class="custom_item_title">地址</div>
+                    <input type="text" class="custom_item_text" id="address">
+                </div>
+            </div>
+        </div>
+        <div class="custom_submit">提交</div>
+    </section>
+</body>
+<script src="js/main.js"></script>
+<script>
+    localStorage.setItem('key','Custom');
+</script>
+</html>

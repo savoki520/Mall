@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>小工具介绍</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/rem.js"></script>
+</head>
+<body >
+    <header class="header">
+        <img src="image/Introduction/one.png" class="intro_one">
+    </header>
+    <section class="content_three">
+        <img src="image/Introduction/two.png" class="intro_two">
+    </section>
+    <!--购买界面-->
+    <div class="buy">
+        <div class="buy_box">
+            <div class="buy_title">
+                <p>预约报名</p>
+            </div>
+            <div class="buy_content">
+                <div class="buy_item">
+                    <div class="buy_item_title">姓名</div>
+                    <input type="text" class="buy_item_text" id="name">
+                </div>
+                <div class="buy_item">
+                    <div class="buy_item_title">手机号</div>
+                    <input type="text" class="buy_item_text" id="phone">
+                </div>
+                <div class="buy_item">
+                    <div class="buy_item_title">商铺名</div>
+                    <input type="text" class="buy_item_text" id="shopname">
+                </div>
+                <div class="buy_item">
+                    <div class="buy_item_title">地址</div>
+                    <input type="text" class="buy_item_text" id="address">
+                </div>
+            </div>
+            <div class="buy_submit">提交</div>
+        </div>
+    </div>
+    <!--资料提交成功界面-->
+    <div class="buy_ok">
+        <div class="buy_okbox">
+            <div class="buy_ok_logo">
+                <img src="image/Introduction/logo.png">
+            </div>
+            <div class="buy_ok_fontone">资料提交成功</div>
+            <div class="buy_ok_fonttwo">结构将在1-2工作日反馈</div>
+            <div class="buy_ok_submit">知道啦</div>
+        </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+<script>
+    localStorage.setItem('key','Introduction');
+</script>
+</html>
