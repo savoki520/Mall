@@ -7,49 +7,94 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery.js"></script>
     <script src="js/rem.js"></script>
+    <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 </head>
-<body>
+<body class="index_body">
     <section class="content_one">
-        <div class="one_imgone">
-            <div class="one_img_one">
+        <!--<div class="one_imgone">-->
+            <!--<div class="one_img_one">-->
                 <!--<img src="image/Details/one_imgone_img.png" class="one_imgone_img" style="display: none;">-->
-            </div>
-            <div class="one_img_point">
-                <div class="one_img_point_item">
-                    <!--<div class="point_item"></div>-->
-                </div>
+            <!--</div>-->
+            <!--<div class="one_img_point">-->
+                <!--<div class="one_img_point_item">-->
+                    <!--&lt;!&ndash;<div class="point_item"></div>&ndash;&gt;-->
+                <!--</div>-->
 
+            <!--</div>-->
+        <!--</div>-->
+        <div class="test_imgbox">
+            <div class="one_img_one">
+                <!--<a href="" class="one_img_herf"><img src="" class="one_imgone_img one">1</a>-->
+                <!--<a href="" class="one_img_herf"><img src="" class="one_imgone_img two">2</a>-->
+                <!--<a href="" class="one_img_herf"><img src="" class="one_imgone_img three">3</a>-->
+                <!--<a href="" class="one_img_herf"><img src="" class="one_imgone_img four">4</a>-->
+                <!--<a href="" class="one_img_herf"><img src="" class="one_imgone_img one">1</a>-->
             </div>
         </div>
         <div class="one_twobox">
+            <div class="one_two_background"></div>
             <div class="one_two_img">
-                <div class="one_two_titlebox">
-                    <div class="one_two_title">你有一个宝箱待开启</div>
-                    <div class="one_two_intro">当前已有135456人开启了宝箱</div>
-                </div>
-                <div class="one_two_href">去看看</div>
             </div>
         </div>
         <div class="one_threebox">
-            <!--<div class="one_three_item item_add">商家</div>-->
-            <div class="one_three_item_i">
-                <p class="item">更多</p>
-                <div class="item_img" id="item_img"></div>
+            <!--<a class="one_three_item item_add" onclick="one_three_item($('.one_three_item').index(this))">全部</a>-->
+            <!--<div class="one_three_item_i">-->
+                <!--<p class="item">更多</p>-->
+                <!--<div class="item_img" id="item_img"></div>-->
+            <!--</div>-->
+            <!--<div class="expansion">-->
+                <!--&lt;!&ndash;<div class="expansion_item">分类</div>&ndash;&gt;-->
+            <!--</div>-->
+        </div>
+        <div class="one_special">
+            <div class="special_item_two">
+                <div class="special_item_two_font special_item_add">新款上市</div>
             </div>
-            <div class="expansion">
-                <!--<div class="expansion_item">分类</div>-->
+            <div class="special_item_two">
+                <div class="special_item_two_font">购买最多</div>
             </div>
+            <div class="special_item_two">
+                <div class="special_item_two_font">热度最高</div>
+            </div>
+
         </div>
         <div class="one_fourbox">
-            <!--<div class="one_four_item">-->
+            <!--<div class="one_four_item" onclick="one_four_item()">-->
                 <!--<div class="one_four_item_imgbox">-->
                     <!--<img src="" class="one_four_item_img">-->
+                    <!--<div class="one_four_item_left">-->
+                        <!--购买数量：46-->
+                    <!--</div>-->
+                    <!--<div class="one_four_item_hot">-->
+                        <!--<div class="one_four_item_hot_item">热度</div>-->
+                        <!--<img src="image/Details/xing.png">-->
+                        <!--<img src="image/Details/xing.png">-->
+                        <!--<img src="image/Details/xing.png">-->
+                    <!--</div>-->
                 <!--</div>-->
                 <!--<div class="one_four_item_intro">限时好礼</div>-->
+                <!--<div class="one_four_item_shop">-->
+                    <!--<div>购买数量：46</div>-->
+                <!--</div>-->
             <!--</div>-->
-            <p class="one_four_p">暂无数据- _ - |||</p>
+
+            <img class="one_four_nodata" src="image/Details/nodata.png">
+            <p class="one_four_p">暂无数据</p>
         </div>
-        <div class="one_button">我的优惠券</div>
+        <div class="one_footer">
+            <div class="one_footer_header">
+                <img src="image/Details/footer.png">
+            </div>
+            <div class="one_footer_title">
+                <img src="image/Details/footer_title.png">
+            </div>
+            <div class="one_footer_img">
+                <img src="image/Details/footer_img.png">
+                <div class="one_footer_div">常州有光网络科技有限公司</div>
+            </div>
+        </div>
+        <div class="one_button">我的奖品</div>
+        <div class="one_button_two">新手必读</div>
     </section>
     <!--我的优惠券-->
     <div class="mycard">
@@ -70,10 +115,12 @@
                         <!--<div class="gift_time">有效期至 2018-12-3</div>-->
                     <!--</div>-->
                 <!--</div>-->
-                <p class="one_four_p">暂无优惠券- _ - |||</p>
+                <p class="one_four_p">暂无抵扣券</p>
+                <a class="one_four_href" href="Share.html">前往获取抵扣券</a>
             </div>
         </div >
     </div>
+
 </body>
 <script src="js/main.js"></script>
 <script>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery.js"></script>
     <script src="js/rem.js"></script>
+    <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 </head>
 <body>
     <section class="custom">
@@ -15,9 +16,33 @@
         </div>
         <div class="custom_two">
             <div class="custom_two_title">
-                <P>活动简介</P>
+                <p>说明</p>
             </div>
-            <div class="custom_two_intro">金秋十月，互联网设计行业顶级大咖评委已经集结完毕，等你来秀。本届沉淀两年的十佳设计师评选，谁会脱颖而出，谁会众望所归，让我们拭目以待！
+            <div class="custom_two_intro">
+                <div class="custom_two_item">
+                    <div class="custom_two_item_img">
+                        <img src="image/Custom/custom_item_one.png" class="custom_item_img_one">
+                    </div>
+                    <p>轻松创建活动</p>
+                </div>
+                <div class="custom_two_item">
+                    <div class="custom_two_item_img">
+                        <img src="image/Custom/custom_item_two.png" class="custom_item_img_two">
+                    </div>
+                    <p>专属获客机制</p>
+                </div>
+                <div class="custom_two_item">
+                    <div class="custom_two_item_img">
+                        <img src="image/Custom/custom_item_three.png" class="custom_item_img_three">
+                    </div>
+                    <p>客户数据分析</p>
+                </div>
+                <div class="custom_two_item">
+                    <div class="custom_two_item_img">
+                        <img src="image/Custom/custom_item_four.png" class="custom_item_img_four">
+                    </div>
+                    <p>品牌广告植入</p>
+                </div>
             </div>
         </div>
         <div class="custom_three">
@@ -26,25 +51,36 @@
             </div>
             <div class="custom_three_content">
                 <div class="custom_three_item">
-                    <div class="custom_item_title">姓名</div>
+                    <div class="custom_item_title">联系人<span>*</span></div>
                     <input type="text" class="custom_item_text" id="name">
-                </div>
-                <div class="custom_three_item">
-                    <div class="custom_item_title">手机号</div>
-                    <input type="text" class="custom_item_text" id="phone">
-                </div>
-                <div class="custom_three_item">
-                    <div class="custom_item_title">商铺名</div>
-                    <input type="text" class="custom_item_text" id="shopname">
                 </div>
                 <div class="custom_three_item">
                     <div class="custom_item_title">地址</div>
                     <input type="text" class="custom_item_text" id="address">
                 </div>
+                <div class="custom_three_item">
+                    <div class="custom_item_title">企业名称</div>
+                    <input type="text" class="custom_item_text" id="shopname">
+                </div>
+                <div class="custom_three_item">
+                    <div class="custom_item_title">联系方式<span>*</span></div>
+                    <input type="text" class="custom_item_text" id="phone">
+                </div>
+                <div class="custom_three_ts">*<span>为必填项</span></div>
             </div>
         </div>
         <div class="custom_submit">提交</div>
     </section>
+    <!--填写信息才成功后，前去分享提示-->
+    <div class="buy_ok">
+        <div class="buy_okbox">
+            <div class="buy_ok_logo">
+                <img src="image/Introduction/logo.png">
+            </div>
+            <div class="buy_ok_fontone">提交成功，我们的工作人员会尽快与您取得联系。</div>
+            <div class="buy_ok_submit">知道啦</div>
+        </div>
+    </div>
 </body>
 <script src="js/main.js"></script>
 <script>

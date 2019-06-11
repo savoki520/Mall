@@ -3,27 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>成为合伙人</title>
+    <title>成为代理</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery.js"></script>
     <script src="js/rem.js"></script>
+    <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 </head>
 <body style="background: rgba(0,21,112,1)">
     <section class="partner">
         <div class="partner_one">
             <img src="image/Partner/partner_one.png">
-        </div>
-        <div class="partner_two">
-            <div class="partner_header">
-                <div class="partner_header_imgone">
-                    <img src="image/Partner/partner_two.png">
-                </div>
-                <div class="partner_header_title">活动规则</div>
-                <div class="partner_header_imgtwo">
-                    <img src="image/Partner/partner_two.png">
-                </div>
-            </div>
-            <div class="partner_intro">金秋十月，互联网设计行业顶级大咖评委已经集结完毕，等你来秀。本届沉淀两年的十佳设计师评选，谁会脱颖而出，谁会众望所归，让我们拭目以待！</div>
         </div>
         <div class="partner_three">
             <div class="partner_header">
@@ -37,25 +26,40 @@
             </div>
             <div class="partner_three_content">
                 <div class="partner_three_item">
-                    <div class="partner_item_title">姓名</div>
+                    <div class="partner_item_title">联系人<span>*</span></div>
                     <input type="text" class="partner_item_text" id="name">
-                </div>
-                <div class="partner_three_item">
-                    <div class="partner_item_title">手机号</div>
-                    <input type="text" class="partner_item_text" id="phone">
-                </div>
-                <div class="partner_three_item">
-                    <div class="partner_item_title">商铺名</div>
-                    <input type="text" class="partner_item_text" id="shopname">
                 </div>
                 <div class="partner_three_item">
                     <div class="partner_item_title">地址</div>
                     <input type="text" class="partner_item_text" id="address">
                 </div>
+                <div class="partner_three_item">
+                    <div class="partner_item_title">联系方式<span>*</span></div>
+                    <input type="text" class="partner_item_text" id="phone">
+                </div>
+                <div class="partner_three_ts">*<span>为必填项</span></div>
+                <!--<div class="partner_three_item">-->
+                    <!--<div class="partner_item_title">商铺名称</div>-->
+                    <!--<input type="text" class="partner_item_text" id="shopname">-->
+                <!--</div>-->
+
             </div>
         </div>
         <div class="partner_submit">提交</div>
+        <!--关于我们-->
+        <div class="partner_about">关于我们</div>
     </section>
+    <!--填写信息才成功后，前去分享提示-->
+    <div class="buy_ok">
+        <div class="buy_okbox">
+            <div class="buy_ok_logo">
+                <img src="image/Introduction/logo.png">
+            </div>
+            <div class="buy_ok_fontone">提交成功，我们的工作人员会尽快与您取得联系。</div>
+            <div class="buy_ok_submit">知道啦</div>
+        </div>
+    </div>
+
 </body>
 <script src="js/main.js"></script>
 <script>

@@ -7,53 +7,74 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery.js"></script>
     <script src="js/rem.js"></script>
+    <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 </head>
-<body>
-    <header class="member_img">
-        <img src="image/Member/background.png">
-    </header>
-    <section class="member">
-        <div class="member_title">赶快成为会员</div>
+<body style="background: rgba(255,255,255,1)">
+    <section class="new_member">
         <div class="member_one">
-            <div class="member_one_one"></div>
-            <div class="member_one_two"></div>
-            <div class="member_one_three"></div>
-            <div class="member_one_four">免费试用，终身质保</div>
+            <div class="member_one_one">
+                <img src="image/Member/new_two.png">
+            </div>
+            <div class="member_one_two">
+                <img src="image/Member/new_three.png">
+            </div>
+            <div class="member_one_three">
+                <img src="image/Member/new_four.png">
+            </div>
         </div>
         <div class="member_two">
-            <div class="member_two_title">
-                <p>活动简介</p>
+            <div class="member_two_one">
+                <img src="image/Member/new_five.png">
             </div>
-            <div class="member_two_intro">金秋十月，互联网设计行业顶级大咖评委已经集结完毕，等你来秀。
-                金秋十月，互联网设计行业顶级大咖评委已经集结完毕，等你来秀。
-                金秋十月，互联网设计行业顶级大咖评委已经集结完毕，等你来秀。本届沉淀两年的十佳设计师评选，谁会脱颖而出，谁会众望所归，让我们拭目以待！
+            <div class="member_two_two">
+                <img src="image/Member/new_six.png">
+            </div>
+            <div class="member_two_three">
+                <img src="image/Member/new_seven.png">
+            </div>
+            <div class="member_two_four">
+                <img src="image/Member/new_eight.png">
+            </div>
+            <div class="member_two_five">
+                <img src="image/Member/new_nine.png">
+            </div>
+            <div class="member_two_six">
+                <img src="image/Member/new_ten.png">
             </div>
         </div>
         <div class="member_three">
-            <div class="member_three_title">
-                <p>填写个人信息</p>
+            <div class="member_three_item">
+                <div class="member_item_title">联系人<span>*</span></div>
+                <input type="text" class="member_item_text" id="name" >
             </div>
-            <div class="member_three_content">
-                <div class="member_three_item">
-                    <div class="member_item_title">姓名</div>
-                    <input type="text" class="member_item_text" id="name">
-                </div>
-                <div class="member_three_item">
-                    <div class="member_item_title">手机号</div>
-                    <input type="text" class="member_item_text" id="phone">
-                </div>
-                <div class="member_three_item">
-                    <div class="member_item_title">商铺名</div>
-                    <input type="text" class="member_item_text" id="shopname">
-                </div>
-                <div class="member_three_item">
-                    <div class="member_item_title">地址</div>
-                    <input type="text" class="member_item_text" id="address">
-                </div>
+            <div class="member_three_item">
+                <div class="member_item_title">地址</div>
+                <input type="text" class="member_item_text" id="address">
             </div>
+            <div class="member_three_item">
+                <div class="member_item_title">联系方式<span>*</span></div>
+                <input type="text" class="member_item_text" id="phone" >
+            </div>
+            <!--<div class="member_three_item">-->
+                <!--<div class="member_item_title">商铺名称</div>-->
+                <!--<input type="text" class="member_item_text" id="shopname" >-->
+            <!--</div>-->
+            <div class="member_three_ts">*为必填项</div>
         </div>
-        <div class="member_submit">提交</div>
+        <div class="member_submit">
+           <img src="image/Member/new_eve.png">
+        </div>
     </section>
+    <!--填写信息才成功后，前去分享提示-->
+    <div class="buy_ok">
+        <div class="buy_okbox">
+            <div class="buy_ok_logo">
+                <img src="image/Introduction/logo.png">
+            </div>
+            <div class="buy_ok_fontone">提交成功，我们的工作人员会尽快与您取得联系。</div>
+            <div class="buy_ok_submit">知道啦</div>
+        </div>
+    </div>
 </body>
 <script src="js/main.js"></script>
 <script>

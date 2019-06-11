@@ -7,61 +7,78 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery.js"></script>
     <script src="js/rem.js"></script>
+    <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 </head>
 <body style="background: rgba(238,236,255,1)">
     <header class="designer_header"></header>
     <section class="designer_content">
         <div class="designer_content_one">
-            <div class="designer_title">活动介绍</div>
+            <div class="designer_title">简介</div>
             <div class="designer_title_header">
-                <p>1.0版本</p>
-                <p>顺利完成并从即日起全新上线</p>
+                <p>提出宝贵项目意见或方案</p>
+                <p> 一经采纳您将成为签约产品设计师</p>
+                <p>坐享高额销售分红</p>
             </div>
-            <div class="designer_title_content">
-                <div class="designer_title_one">
-                    <div class="designer_title_one_line"></div>
-                    <div class="designer_title_one_font">具体上线功能如下</div>
-                    <div class="designer_title_one_line"></div>
-                </div>
-                <div class="designer_title_two">
-                    <div class="designer_title_two_font">
-                        <div class="designer_title_two_line"></div>
-                        <div class="designer_title_two_text">这里填充文案待定。这里填充文案待定。这里填充文案待定。这里填充文案待定。</div>
-                    </div>
-                    <div class="designer_title_two_font">
-                        <div class="designer_title_two_line"></div>
-                        <div class="designer_title_two_text">这里填充文案待定。这里填充文案待定。</div>
-                    </div>
-                    <div class="designer_title_two_font">
-                        <div class="designer_title_two_line"></div>
-                        <div class="designer_title_two_text">这里填充文案待定。这里填充文案待定。</div>
-                    </div>
-                    <div class="designer_title_two_font">
-                        <div class="designer_title_two_line"></div>
-                        <div class="designer_title_two_text">这里填充文案待定。这里填充文案待定。</div>
-                    </div>
-                </div>
+            <div class="designer_gold_one">
+                <img src="image/Designer/gold_one.png">
             </div>
+            <div class="designer_gold_two">
+                <img src="image/Designer/gold_two.png">
+            </div>
+            <div class="designer_red_one">
+                <img src="image/Designer/red_one.png">
+            </div>
+            <div class="designer_red_two">
+                <img src="image/Designer/red_two.png">
+            </div>
+
+            <!--<div class="designer_title_content">-->
+                <!--<div class="designer_title_one">-->
+                    <!--<div class="designer_title_one_line"></div>-->
+                    <!--<div class="designer_title_one_font">具体上线功能如下</div>-->
+                    <!--<div class="designer_title_one_line"></div>-->
+                <!--</div>-->
+                <!--<div class="designer_title_two">-->
+                    <!--<div class="designer_title_two_font">-->
+                        <!--<div class="designer_title_two_line"></div>-->
+                        <!--<div class="designer_title_two_text">这里填充文案待定。这里填充文案待定。这里填充文案待定。这里填充文案待定。</div>-->
+                    <!--</div>-->
+                    <!--<div class="designer_title_two_font">-->
+                        <!--<div class="designer_title_two_line"></div>-->
+                        <!--<div class="designer_title_two_text">这里填充文案待定。这里填充文案待定。</div>-->
+                    <!--</div>-->
+                    <!--<div class="designer_title_two_font">-->
+                        <!--<div class="designer_title_two_line"></div>-->
+                        <!--<div class="designer_title_two_text">这里填充文案待定。这里填充文案待定。</div>-->
+                    <!--</div>-->
+                    <!--<div class="designer_title_two_font">-->
+                        <!--<div class="designer_title_two_line"></div>-->
+                        <!--<div class="designer_title_two_text">这里填充文案待定。这里填充文案待定。</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
         <div class="designer_content_two">
             <div class="designer_title">填写信息</div>
             <div class="designer_two_one">
                 <div class="designer_two_item">
-                    <div class="designer_item_title">姓名</div>
+                    <div class="designer_item_title">联系人<span>*</span></div>
                     <input type="text" class="designer_item_text" id="name">
                 </div>
                 <div class="designer_two_item">
-                    <div class="designer_item_title">手机号</div>
+                    <div class="designer_item_title">联系方式<span>*</span></div>
                     <input type="text" class="designer_item_text" id="phone">
                 </div>
-                <div class="designer_two_item">
-                    <div class="designer_item_title">商铺名</div>
-                    <input type="text" class="designer_item_text" id="shopname">
+                <div class="designer_textarea_title">
+                    <div class="designer_item_title">意见</div>
+                    <!--<input type="text" class="designer_item_text" id="shopname">-->
                 </div>
-                <div class="designer_two_item">
-                    <div class="designer_item_title">地址</div>
-                    <input type="text" class="designer_item_text" id="address">
-                </div>
+                <textarea class="designer_textarea" id="opinion" placeholder="字数请勿超过200字！"></textarea>
+                <!--<div class="designer_two_item">-->
+                    <!--<div class="designer_item_title">商铺地址</div>-->
+                    <!--<input type="text" class="designer_item_text" id="address">-->
+                <!--</div>-->
+                <div class="designer_two_ts">*为必填项</div>
             </div>
         </div>
         <div class="designer_button">提交</div>
@@ -69,6 +86,16 @@
     <footer class="footer">
         <img src="image/Designer/footer.png">
     </footer>
+    <!--填写信息才成功后，前去分享提示-->
+    <div class="buy_ok">
+        <div class="buy_okbox">
+            <div class="buy_ok_logo">
+                <img src="image/Introduction/logo.png">
+            </div>
+            <div class="buy_ok_fontone">提交成功，我们的工作人员会尽快与您取得联系。</div>
+            <div class="buy_ok_submit">知道啦</div>
+        </div>
+    </div>
 </body>
 <script src="js/main.js"></script>
 <script>
