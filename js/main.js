@@ -55,6 +55,7 @@ window.onload = function () {
         //ios，判断链接是否带有ui，来判断苹果苹果手机第二次刷新界面时是否需要微信授权
         if(getRequest.ui===1||getRequest.ui==='1'){//无需授权，直接刷新数据
             sss(0);
+            // alert('ios再进入');
             if(getRequest.userid!==undefined&&getRequest.userid!==null){
                 alert("ios欢迎进入某某某转发的界面");
                 var ddd = {url:'http://www.youguangchina.cn/yxgj/Mall/Login.html',wybs:getRequest.uuid};
@@ -73,6 +74,7 @@ window.onload = function () {
                     }
                 });
             }
+            $(".login_anmate").hide("");
             var handle = function(event){
                 event.preventDefault(); //阻止元素发生默认的行为
             };
@@ -107,6 +109,7 @@ window.onload = function () {
                         window.history.pushState(null, null, 'http://www.youguangchina.cn/yxgj/Mall/Login.html');
                         sss(0);
                         // alert(JSON.stringify(dod));
+                        // alert('安卓ios初始化');
                         if(userid!==undefined&&userid!==null){
                             // alert("欢迎进入某某某转发的界面");
                             var ddd = {url:'http://www.youguangchina.cn/yxgj/Mall/Login.html',wybs:uuid};
@@ -136,6 +139,7 @@ window.onload = function () {
                                 }
                             });
                         }
+                        $(".login_anmate").hide("");
                     },
                     error:function () {
                         console.log("code获取出错");
@@ -195,9 +199,9 @@ window.onload = function () {
                         }
                         $(".one_img_one").append("<a  href=\"" + lj + "\" class=\"one_img_herf\">" +
                             "<img data-id=\"" + lj + "\"  src=\"" + href +"file/download?fileName=" + data.obj[i].val + "\" class=\"one_imgone_img\"></a>");
-                        if(i === 0){
-                            $(".one_img_one").append("<a  href=\"" + lj + "\" class=\"one_img_herf\">" +
-                                "<img data-id=\"" + lj + "\" src=\"" + href +"file/download?fileName=" + data.obj[data.obj.length-1].val + "\" class=\"one_imgone_img\"></a>");
+                        if(i === data.obj.length-1){
+                            $(".one_img_one").append("<a  href=\"" + href + "Mall/Share.html?jk=1" + "\" class=\"one_img_herf\">" +
+                                "<img data-id=\"" + href + "Mall/Share.html?jk=1" + "\" src=\"" + href +"file/download?fileName=" + data.obj[0].val + "\" class=\"one_imgone_img\"></a>");
                         }
                     }
                     var one_img_href = $(".one_img_herf");
@@ -273,6 +277,11 @@ window.onload = function () {
                             $(".one_threebox").append('<a class=\"one_three_item\" href="javascipt:void(0);" onclick="one_three_item(' +
                                 '$(\'.one_three_item\').index(this));return false;">' + data.obj[i].hymc + '</a>')
                         }
+                        // if(i === data.obj.length-1){
+                        //     $(".index_anmate").addClass('aa').delay(500,function () {
+                        //         $(".index_anmate").css('display','none')
+                        //     });
+                        // }
                     }
                     $(".one_three_item").eq(0).addClass('item_add');
                     tool(data.obj[0].hymc,'sjsj');
@@ -503,8 +512,6 @@ window.onload = function () {
                         "&redirect_uri=" + pageUrl + "&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect";
                 }
             }
-
-
         }
     }
     else if(key === "Package"){
@@ -536,6 +543,23 @@ window.onload = function () {
         }
     }
     else if(key === 'about'){
+        // var loginten = localStorage.getItem('login');
+        // if(loginten === 1||loginten === '1'){
+        //     ssss();
+        // }
+        // else {
+        //     alert("请登录！");
+        //     window.location.href = 'Login.html';
+        // }
+    }
+    else if(key === 'newer'){
+        var userid = getRequest.userid;
+        if(userid!==undefined&&userid!==null){//此界面是进入的转发界面
+            $('.tt').attr('src',"http://www.youguangchina.cn/yxgj/Mall/Login.html?userid=" + getRequest.userid +
+                "&uuid=" + getRequest.uuid + "&ddid=" + getRequest.ddid)
+        }
+    }
+    else if(key === 'advantage'){
         var loginten = localStorage.getItem('login');
         if(loginten === 1||loginten === '1'){
             ssss();
@@ -543,7 +567,16 @@ window.onload = function () {
         else {
             alert("请登录！");
             window.location.href = 'Login.html';
-
+        }
+    }
+    else if(key === 'success'){
+        var logintenn = localStorage.getItem('login');
+        if(logintenn === 1||logintenn === '1'){
+            ssss();
+        }
+        else {
+            alert("请登录！");
+            window.location.href = 'Login.html';
         }
     }
 };
@@ -585,7 +618,7 @@ function one_four_item(i) {
     });
 }
 //点击大宝箱进入点击赢好礼界面ok
-$(".one_two_img").click(function () {
+$(".one_twobox").click(function () {
     window.location.href = 'Win.html';
 });
 //点击我的优惠券进入优惠券ok
@@ -698,8 +731,9 @@ function pointt(i) {
 //分类小工具数据获取ok
 function tool(i,k) {
     // console.log(i,k);
+    $(".one_four_anmate").show();
     var one_fourbox = $(".one_fourbox");
-    one_fourbox.children().remove();
+    one_fourbox.children().not(".one_four_anmate").remove();
     if(i === '全部'){
         $.ajax({//获取第一个分类小工具sjsj新款上市，gms购买数，rd热度
             url:href + 'cp/list?sort=' + k + '&order=desc',
@@ -711,6 +745,10 @@ function tool(i,k) {
                 if(data.obj.length === 0){
                     one_fourbox.append("<img class=\"one_four_nodata\" src=\"image/Details/nodata.png\">\n" +
                         "            <p class=\"one_four_p\">暂无数据</p>")
+                    $(".index_anmate").addClass('aa').delay(500,function () {
+                        $(".index_anmate").css('display','none')
+                    });
+
                 }
                 else {
                     for(var i = 0;i<data.obj.length;i++){
@@ -746,10 +784,20 @@ function tool(i,k) {
                             }
                             kk++;
                         }
+                        if(i === data.obj.length-1){
+                            $(".index_anmate").addClass('aa').delay(500,function () {
+                                $(".index_anmate").css('display','none')
+                            });
+                            $(".one_four_anmate").hide();
+                        }
                     }
                     if(m === 0){
                         one_fourbox.append("<img class=\"one_four_nodata\" src=\"image/Details/nodata.png\">\n" +
                             "            <p class=\"one_four_p\">暂无数据</p>")
+                        $(".index_anmate").addClass('aa').delay(500,function () {
+                            $(".index_anmate").css('display','none')
+                        });
+                        $(".one_four_anmate").hide();
                     }
                 }
             },
@@ -769,6 +817,10 @@ function tool(i,k) {
                 if(data.obj.length === 0){
                     one_fourbox.append("<img class=\"one_four_nodata\" src=\"image/Details/nodata.png\">\n" +
                         "            <p class=\"one_four_p\">暂无数据</p>")
+                    $(".index_anmate").addClass('aa').delay(500,function () {
+                        $(".index_anmate").css('display','none')
+                    });
+                    $(".one_four_anmate").hide();
                 }
                 else {
                     for(var i = 0;i<data.obj.length;i++){
@@ -802,10 +854,20 @@ function tool(i,k) {
                             }
                             kk++;
                         }
+                        if(i === data.obj.length-1){
+                            $(".index_anmate").addClass('aa').delay(500,function () {
+                                $(".index_anmate").css('display','none')
+                            });
+                            $(".one_four_anmate").hide();
+                        }
                     }
                     if(m === 0){
                         one_fourbox.append("<img class=\"one_four_nodata\" src=\"image/Details/nodata.png\">\n" +
                             "            <p class=\"one_four_p\">暂无数据</p>")
+                        $(".index_anmate").addClass('aa').delay(500,function () {
+                            $(".index_anmate").css('display','none')
+                        });
+                        $(".one_four_anmate").hide();
                     }
                 }
             },
@@ -983,9 +1045,9 @@ $(".share_submit").click(function () {
                                 var timestamp = data.obj.timestamp;
                                 var nonceStr = data.obj.nonceStr;
                                 var signature = data.obj.signature;
-                                var shareTitle = "有光 聚客宝";
+                                var shareTitle = "有光聚客宝-获客神器";
                                 var shareDesc =  "一键推广，轻松获客，迅速提高营业额！\n2019分享经济，营销新模式";
-                                var shareUrl = "http://www.youguangchina.cn/yxgj/Mall/Login.html?userid=" + localStorage.getItem('userid') +
+                                var shareUrl = "http://www.youguangchina.cn/yxgj/Mall/newer.html?userid=" + localStorage.getItem('userid') +
                                     "&uuid=" + uuid + "&ddid=" + ddid;
                                 wx.config({
                                     debug: false,
@@ -1258,9 +1320,9 @@ function sss(yy) {
             var timestamp = data.obj.timestamp;
             var nonceStr = data.obj.nonceStr;
             var signature = data.obj.signature;
-            var shareTitle = "有光 聚客宝";
+            var shareTitle = "有光聚客宝-获客神器";
             var shareDesc =  "一键推广，轻松获客，迅速提高营业额！\n2019分享经济，营销新模式";
-            var shareUrl = "http://www.youguangchina.cn/yxgj/Mall/Login.html";
+            var shareUrl = "http://www.youguangchina.cn/yxgj/Mall/newer.html";
             wx.config({
                 debug: false,
                 appId: appid,
@@ -1395,9 +1457,9 @@ function ssss() {
             var timestamp = data.obj.timestamp;
             var nonceStr = data.obj.nonceStr;
             var signature = data.obj.signature;
-            var shareTitle = "有光 聚客宝";
+            var shareTitle = "有光聚客宝-获客神器";
             var shareDesc =  "一键推广，轻松获客，迅速提高营业额！\n2019分享经济，营销新模式";
-            var shareUrl = "http://www.youguangchina.cn/yxgj/Mall/Login.html?";
+            var shareUrl = "http://www.youguangchina.cn/yxgj/Mall/newer.html?";
             wx.config({
                 debug: false,
                 appId: appid,
@@ -1479,15 +1541,21 @@ function ssss() {
 }
 
 //分享界面获取二维码(已弃置)
-function qrcode() {
-    var url = 'http://www.youguangchina.cn/yxgj/Mall/Login.html';
-    $(".qrcode").attr('src',href + 'wx/shareQrcodeByContent?content=' + url+'&fileName=af7a5142-df27-4854-a5b7-83a2651cd352.png')
-}
+// function qrcode() {
+//     var url = 'http://www.youguangchina.cn/yxgj/Mall/newer.html';
+//     $(".qrcode").attr('src',href + 'wx/shareQrcodeByContent?content=' + url+'&fileName=af7a5142-df27-4854-a5b7-83a2651cd352.png')
+// }
 
 //封面页面跳转工具详情
 $(".label").click(function () {
-    window.location.href = 'about.html';
+    window.location.href = 'sussecc.html';
 });
 $(".partner_about").click(function () {
+    window.location.href = 'about.html';
+});
+$(".label_one").click(function () {
+    window.location.href = 'Advantage.html'
+});
+$(".label_two").click(function () {
     window.location.href = 'about.html';
 });

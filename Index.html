@@ -33,8 +33,8 @@
         </div>
         <div class="one_twobox">
             <div class="one_two_background"></div>
-            <div class="one_two_img">
-            </div>
+            <div class="one_two_img"></div>
+            <div class="one_two_img_two"></div>
         </div>
         <div class="one_threebox">
             <!--<a class="one_three_item item_add" onclick="one_three_item($('.one_three_item').index(this))">全部</a>-->
@@ -59,6 +59,15 @@
 
         </div>
         <div class="one_fourbox">
+            <div class="one_four_anmate">
+                <div class="sk-wave">
+                    <div class="sk-rect sk-rect1"></div>
+                    <div class="sk-rect sk-rect2"></div>
+                    <div class="sk-rect sk-rect3"></div>
+                    <div class="sk-rect sk-rect4"></div>
+                    <div class="sk-rect sk-rect5"></div>
+                </div>
+            </div>
             <!--<div class="one_four_item" onclick="one_four_item()">-->
                 <!--<div class="one_four_item_imgbox">-->
                     <!--<img src="" class="one_four_item_img">-->
@@ -78,8 +87,8 @@
                 <!--</div>-->
             <!--</div>-->
 
-            <img class="one_four_nodata" src="image/Details/nodata.png">
-            <p class="one_four_p">暂无数据</p>
+            <!--<img class="one_four_nodata" src="image/Details/nodata.png">-->
+            <!--<p class="one_four_p">暂无数据</p>-->
         </div>
         <div class="one_footer">
             <div class="one_footer_header">
@@ -120,10 +129,22 @@
             </div>
         </div >
     </div>
-
+    <!--加载动画-->
+    <div class="index_anmate">
+        <div class="sk-wave">
+            <div class="sk-rect sk-rect1"></div>
+            <div class="sk-rect sk-rect2"></div>
+            <div class="sk-rect sk-rect3"></div>
+            <div class="sk-rect sk-rect4"></div>
+            <div class="sk-rect sk-rect5"></div>
+        </div>
+    </div>
 </body>
 <script src="js/main.js"></script>
 <script>
     localStorage.setItem('key','Index');
+//    $(".index_anmate").delay(500).addClass('aa').delay(500,function () {
+//        $(".index_anmate").css('display','none')
+//    });
 </script>
 </html>
